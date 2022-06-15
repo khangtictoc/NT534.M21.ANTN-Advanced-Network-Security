@@ -425,7 +425,8 @@ NAME    READY   STATUS    RESTARTS   AGE     IP            NODE     NOMINATED NO
 nginx   1/1     Running   0          4m17s   10.48.0.128   knode1   <none>           <none>
 ```
 
-This will run a container with image named `nginx`, port `80`, just let it keep running. Carefully beware of label-value `fw-zone=trusted`.
+- This will run a container with image named `nginx`, port `80`, just let it keep running. Carefully beware of label-value `fw-zone=trusted`.
+- **Master** Node defaulty will auto create this pod into `knode1` Worker.
 
 6. Try another container (fail to predefined policy):
 ```bash
@@ -466,6 +467,10 @@ kubectl create namespace internal-ns
 kubectl annotate namespace internal-ns "cni.projectcalico.org/ipv4pools"="[\"new-pool\"]" --overwrite
 kubectl run nginx --image nginx --namespace internal-ns
 ```
+
+## Further demonstration:
+
+You can add more node between Worker 1 and Worker 2 and set more rules/policies and observe the result. Happy testing !!!!
 
 ## Reference:
 
