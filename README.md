@@ -470,7 +470,7 @@ kubectl run nginx --image nginx --namespace internal-ns
 
 ## Further demonstration:
 
-You can add more node between Worker 1 and Worker 2 and set more rules/policies and observe the result. Happy testing !!!!
+You can add more pods between Worker 1 and Worker 2 and set more rules/policies to observe the result. Happy testing !!!!
 
 ## Reference:
 
