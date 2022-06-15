@@ -458,7 +458,7 @@ curl 10.48.0.128
 This should be successful. It prints out the contents of nginx's webpage.
 
 
-### Adding a new ippool for a specific namespace
+### Adding a new ippool for a specific namespace (Bonus):
 
 ```bash
 calicoctp apply -f 10.48.1.0-ippool.yaml
