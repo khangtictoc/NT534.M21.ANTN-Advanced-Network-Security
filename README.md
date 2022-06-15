@@ -461,7 +461,7 @@ This should be successful. It prints out the contents of nginx's webpage.
 ### Adding a new ippool for a specific namespace (Bonus):
 
 ```bash
-calicoctp apply -f 10.48.1.0-ippool.yaml
+calicoctl apply -f 10.48.1.0-ippool.yaml
 kubectl create namespace internal-ns
 kubectl annotate namespace internal-ns "cni.projectcalico.org/ipv4pools"="[\"new-pool\"]" --overwrite
 kubectl run nginx --image nginx --namespace internal-ns
