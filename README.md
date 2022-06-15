@@ -4,7 +4,6 @@
 
 <p align="center"><img width=700 height=350 src="Img/Architecture_K8S_Calico.png"></p>
 
-### Fundamental configurations:
 3 VMWare (Ubuntu 18.04 \<Desktop version\>)
 - Control Plane (Master Node): **NAT Network Mode**, 4GB RAM, 2 CPU Processors. IP Address: `192.168.153.169`
 - Worker Node 1: **NAT Network Mode**, 2GB RAM, 1 CPU Processors. IP Address: `192.168.153.165`
@@ -386,7 +385,7 @@ calicoctl ipam show --show-blocks
 +----------+--------------+-----------+------------+-----------+
 ```
 
-### Simple Calico network policy example:
+## Simple Calico network policy example:
 
 1. Inspect the global network policies
 
