@@ -1,5 +1,7 @@
 # Deployment (Kubernetes + Calico)
 
+### If you've already work with K8S Cluster. Move to <a href="#help-yourself">Help Yourself</a>
+
 ## General Architecture and Setup:
 
 <p align="center"><img width=700 height=350 src="Img/Architecture_K8S_Calico.png"></p>
@@ -470,6 +472,23 @@ kubectl run nginx --image nginx --namespace internal-ns
 ## Further demonstration:
 
 You can add more pods between Worker 1 and Worker 2 and set more rules/policies to observe the result. Happy testing !!!!
+
+## Help yourself:
+
+1. If you need to **reset** cluster in below case:
+- Redo `kubeadm init`
+- Redo `kubeadm join`
+
+You could use the following command:
+```
+sudo kubeadm reset # --cri-socket=unix://var/run/cri-dockerd.sock
+```
+
+2. If there are multiple **CRI Socket**, you must specify which socket you're using by `--cri-socket=YOUR_SOCKET`. `YOUR_SOCKET` format should be `unix:/SOCKETPATH`. Available `YOUR_SOCKET` are located in `/var/run`, you could use this to list the available:
+
+```
+sudo ls /var/run | grep -E ".sock$"
+```
 
 ## Reference:
 
