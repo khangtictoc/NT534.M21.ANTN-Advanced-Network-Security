@@ -4,7 +4,11 @@
 
 ## General Architecture and Setup:
 
-<p align="center"><img width=700 height=350 src="Img/Architecture_K8S_Calico.png"></p>
+<p align="center"><img src="assets/img/GIF/Architecture.gif"></p>
+
+Deployment settings:
+- K8S Cluster: `kubeadm`
+- CNI Plugin: Calico
 
 3 VMWare (Ubuntu 18.04 \<Desktop version\>)
 - Control Plane (Master Node): **NAT Network Mode**, 4GB RAM, 2 CPU Processors. IP Address: `192.168.153.169`
